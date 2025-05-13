@@ -17,6 +17,11 @@ ${LOCATOR_CHANGE_PASSWORD}   //a[normalize-space()='Change Password']
 ${PASSWORD_URL}      https://opensource-demo.orangehrmlive.com/web/index.php/pim/updatePassword
 ${LOCATOR_LOGOUT_BUTTON}      //a[normalize-space()='Logout']
 ${LOGIN_PAGE_URL}         https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+${LOCATOR_UPGRADE_BUTTON}      //button[@class="oxd-glass-button orangehrm-upgrade-button"]
+${UPGRADE_URL}     https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+${LOCATOR_HELP_BUTTON}       //button[@title="Help"]
+${HELP_URL}               https://starterhelp.orangehrm.com/hc/en-us
+
 *** Keywords ***
 
 Landing on Home Page

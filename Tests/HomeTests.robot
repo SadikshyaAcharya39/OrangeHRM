@@ -1,10 +1,11 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    BuiltIn
 Resource    ../Pages/LoginPage.robot
 Resource    ../Pages/HomePage.robot
 Library    ../Helper/ExcelKeywords.py
 Resource    ../Helper/common.robot
-#Test Setup    Landing On Home Page
+Test Setup    Test Setup
 #Test Teardown    Close Browser
 
 
@@ -66,5 +67,15 @@ Verifying Logout DropDown Option
    Location Should Be  ${LOGIN_PAGE_URL}
    [Teardown]    Close Browser
 
+Verifying Upgrade Button
+    Click Button    ${LOCATOR_UPGRADE_BUTTON}
+    Sleep    7s
+    Location Should Be   ${UPGRADE_URL}
+    [Teardown]    Close Browser
 
+Verifying Help Button
+    Click Button   ${LOCATOR_HELP_BUTTON}
+    Sleep   7s
+    Location Should Be    ${UPGRADE_URL}
+    [Teardown]    Close Browser
 
