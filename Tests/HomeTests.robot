@@ -4,8 +4,8 @@ Resource    ../Pages/LoginPage.robot
 Resource    ../Pages/HomePage.robot
 Library    ../Helper/ExcelKeywords.py
 Resource    ../Helper/common.robot
-#Test Setup    Verify Home Page After Login
-Test Teardown    Close Browser
+#Test Setup    Landing On Home Page
+#Test Teardown    Close Browser
 
 
 #*** Test Cases ***
@@ -28,9 +28,43 @@ Verify Home Page After Login
 #    Verify Home Page
 
 Verify DropDown
-   Landing On Home Page
-   Verify Home Page
+   Test Setup
    Click Element    ${LOCATOR_DROP_DOWN}
    Wait Until Element Is Visible    ${LOCATOR_DROP_DOWN_OPTIONS}
+
+
+Verifying About DropDown Option
+   Test Setup
+   Click Element    ${LOCATOR_DROP_DOWN}
+   Wait Until Element Is Visible    ${LOCATOR_DROP_DOWN_OPTIONS}
+   Click Element    ${LOCATOR_ABOUT_OPTION}
+    Wait Until Element Is Visible    ${LOCATOR_ABOUT_SE}
+    [Teardown]    Close Browser
+
+
+Verifying Support DropDown Option
+   Test Setup
+   Click Element    ${LOCATOR_DROP_DOWN}
+   Wait Until Element Is Visible    ${LOCATOR_DROP_DOWN_OPTIONS}
+   Click Element    ${LOCATOR_SUPPORT_OPTION}
+   Location Should Be  ${EXPECTED_URL}
+   [Teardown]    Close Browser
+
+Verifying Change Password DropDown Option
+   Test Setup
+   Click Element    ${LOCATOR_DROP_DOWN}
+   Wait Until Element Is Visible    ${LOCATOR_DROP_DOWN_OPTIONS}
+   Click Element    ${LOCATOR_CHANGE_PASSWORD}
+   Location Should Be  ${PASSWORD_URL}
+   [Teardown]    Close Browser
+
+Verifying Logout DropDown Option
+   Test Setup
+   Click Element    ${LOCATOR_DROP_DOWN}
+   Wait Until Element Is Visible    ${LOCATOR_DROP_DOWN_OPTIONS}
+   Click Element    ${LOCATOR_LOGOUT_BUTTON}
+   Location Should Be  ${LOGIN_PAGE_URL}
+   [Teardown]    Close Browser
+
 
 
