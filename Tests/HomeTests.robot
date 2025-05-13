@@ -79,3 +79,20 @@ Verifying Help Button
     Location Should Be    ${UPGRADE_URL}
     [Teardown]    Close Browser
 
+Verifying Search Bar Functionality - Directory
+    Input Text  ${LOCATOR_SEARCH_BAR}   ${SEARCH_TEXT}
+    Click Element    ${DIRECTORY_MENU}
+    Location Should Be    ${DIRECTORY_URL}
+    [Teardown]    Close Browser
+
+Verifying Search Bar Functionality - Admin
+    Input Text  ${LOCATOR_SEARCH_BAR}   ${SEARCH_TEXT2}
+    Click Element    ${ADMIN_MENU}
+    Location Should Be    ${ADMIN_URL}
+    [Teardown]    Close Browser
+
+
+
+
+
+    
