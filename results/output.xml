@@ -1,152 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-12T17:40:07.506246" rpa="false" schemaversion="5">
-<suite id="s1" name="LoginTests" source="C:\Users\acer\PycharmProjects\OrangeHRM\Tests\LoginTests.robot">
-<test id="s1-t1" name="Successful Login With Valid Credentials" line="9">
+<robot generator="Robot 7.2.2 (Python 3.9.0 on win32)" generated="2025-05-13T20:56:41.171335" rpa="false" schemaversion="5">
+<suite id="s1" name="HomeTests" source="C:\Users\acer\PycharmProjects\OrangeHRM1\Tests\HomeTests.robot">
+<test id="s1-t1" name="Verifying Search Bar Functionality - Buzz" line="151">
+<kw name="Test Setup" owner="HomePage" type="SETUP">
+<kw name="Landing on Home Page" owner="HomePage">
 <kw name="Initialize Login Data" owner="common">
 <kw name="Read Excel Data" owner="ExcelKeywords">
-<msg time="2025-05-12T17:40:07.885145" level="INFO">${url} = https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
+<msg time="2025-05-13T20:56:41.601783" level="INFO">${url} = https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
 <var>${url}</var>
 <arg>${EXCEL_FILE}</arg>
 <arg>${LOGIN_SHEET_NAME}</arg>
 <arg>A2</arg>
-<status status="PASS" start="2025-05-12T17:40:07.754151" elapsed="0.131038"/>
+<status status="PASS" start="2025-05-13T20:56:41.378033" elapsed="0.223750"/>
 </kw>
 <kw name="Read Excel Data" owner="ExcelKeywords">
-<msg time="2025-05-12T17:40:07.887905" level="INFO">${username} = Admin</msg>
+<msg time="2025-05-13T20:56:41.601783" level="INFO">${username} = Admin</msg>
 <var>${username}</var>
 <arg>${EXCEL_FILE}</arg>
 <arg>${LOGIN_SHEET_NAME}</arg>
 <arg>B2</arg>
-<status status="PASS" start="2025-05-12T17:40:07.885334" elapsed="0.002610"/>
+<status status="PASS" start="2025-05-13T20:56:41.601783" elapsed="0.000000"/>
 </kw>
 <kw name="Read Excel Data" owner="ExcelKeywords">
-<msg time="2025-05-12T17:40:07.890461" level="INFO">${password} = admin123</msg>
+<msg time="2025-05-13T20:56:41.615929" level="INFO">${password} = admin123</msg>
 <var>${password}</var>
 <arg>${EXCEL_FILE}</arg>
 <arg>${LOGIN_SHEET_NAME}</arg>
 <arg>C2</arg>
-<status status="PASS" start="2025-05-12T17:40:07.888059" elapsed="0.002434"/>
+<status status="PASS" start="2025-05-13T20:56:41.601783" elapsed="0.014146"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-05-12T17:40:07.890770" level="INFO">${URL} = https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
+<msg time="2025-05-13T20:56:41.615929" level="INFO">${URL} = https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
 <arg>${URL}</arg>
 <arg>${url}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-05-12T17:40:07.890615" elapsed="0.000188"/>
+<status status="PASS" start="2025-05-13T20:56:41.615929" elapsed="0.000000"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-05-12T17:40:07.891003" level="INFO">${USERNAME} = Admin</msg>
+<msg time="2025-05-13T20:56:41.615929" level="INFO">${USERNAME} = Admin</msg>
 <arg>${USERNAME}</arg>
 <arg>${username}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-05-12T17:40:07.890885" elapsed="0.000148"/>
+<status status="PASS" start="2025-05-13T20:56:41.615929" elapsed="0.000000"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-05-12T17:40:07.891213" level="INFO">${PASSWORD} = admin123</msg>
+<msg time="2025-05-13T20:56:41.615929" level="INFO">${PASSWORD} = admin123</msg>
 <arg>${PASSWORD}</arg>
 <arg>${password}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-05-12T17:40:07.891107" elapsed="0.000132"/>
+<status status="PASS" start="2025-05-13T20:56:41.615929" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-05-12T17:40:07.753647" elapsed="0.137645"/>
+<status status="PASS" start="2025-05-13T20:56:41.378033" elapsed="0.237896"/>
 </kw>
 <kw name="Open Login Page" owner="LoginPage">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-05-12T17:40:07.891968" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<arg>${URL}</arg>
-<arg>chrome</arg>
+<msg time="2025-05-13T20:56:41.617671" level="INFO">Opening browser 'firefox' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${url}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-05-12T17:40:07.891823" elapsed="4.354426"/>
+<status status="PASS" start="2025-05-13T20:56:41.617671" elapsed="9.521669"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-05-12T17:40:12.246640" elapsed="0.031665"/>
+<status status="PASS" start="2025-05-13T20:56:51.141348" elapsed="0.272185"/>
 </kw>
 <arg>${URL}</arg>
-<status status="PASS" start="2025-05-12T17:40:07.891602" elapsed="4.386898"/>
+<status status="PASS" start="2025-05-13T20:56:41.615929" elapsed="9.797604"/>
 </kw>
 <kw name="Enter Credentials" owner="LoginPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LOCATOR_USERNAME_FIELD}</arg>
-<arg>timeout=10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-12T17:40:12.280687" elapsed="0.455456"/>
+<status status="PASS" start="2025-05-13T20:56:51.413533" elapsed="0.240823"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-12T17:40:12.736510" level="INFO">Typing text 'Admin' into text field '//input[@placeholder="Username"]'.</msg>
+<msg time="2025-05-13T20:56:51.654356" level="INFO">Typing text 'Admin' into text field '//input[@placeholder="Username"]'.</msg>
 <arg>${LOCATOR_USERNAME_FIELD}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-12T17:40:12.736308" elapsed="0.064875"/>
+<status status="PASS" start="2025-05-13T20:56:51.654356" elapsed="0.039479"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T20:56:53.697933" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T20:56:51.693835" elapsed="2.004098"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LOCATOR_PASSWORD_FIELD}</arg>
-<arg>timeout=15</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-12T17:40:12.801393" elapsed="0.015610"/>
+<status status="PASS" start="2025-05-13T20:56:53.697933" elapsed="0.011472"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T20:56:55.712691" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T20:56:53.709405" elapsed="2.003286"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-12T17:40:12.817357" level="INFO">Typing text 'admin123' into text field '//input[@placeholder="Password"]'.</msg>
+<msg time="2025-05-13T20:56:55.714840" level="INFO">Typing text 'admin123' into text field '//input[@placeholder="Password"]'.</msg>
 <arg>${LOCATOR_PASSWORD_FIELD}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-12T17:40:12.817155" elapsed="0.079364"/>
+<status status="PASS" start="2025-05-13T20:56:55.712691" elapsed="0.027753"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LOCATOR_LOGIN_BUTTON}</arg>
 <arg>timeout=10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-12T17:40:12.896766" elapsed="0.013961"/>
+<status status="PASS" start="2025-05-13T20:56:55.740444" elapsed="0.013930"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-12T17:40:12.911063" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<msg time="2025-05-13T20:56:55.754374" level="INFO">Clicking element '//button[@type='submit']'.</msg>
 <arg>${LOCATOR_LOGIN_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-12T17:40:12.910880" elapsed="0.056901"/>
+<status status="PASS" start="2025-05-13T20:56:55.754374" elapsed="1.294557"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-12T17:40:14.969267" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-05-13T20:56:59.051623" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-12T17:40:12.968057" elapsed="2.001429"/>
+<status status="PASS" start="2025-05-13T20:56:57.048931" elapsed="2.002692"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LOCATOR_DASHBOARD}</arg>
 <arg>timeout=30</arg>
 <arg>error=Dashboard did not become visible</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-12T17:40:14.969972" elapsed="0.030484"/>
+<status status="PASS" start="2025-05-13T20:56:59.051623" elapsed="0.022610"/>
 </kw>
 <arg>${USERNAME}</arg>
 <arg>${PASSWORD}</arg>
-<status status="PASS" start="2025-05-12T17:40:12.279047" elapsed="2.721521"/>
+<status status="PASS" start="2025-05-13T20:56:51.413533" elapsed="7.660700"/>
 </kw>
-<kw name="Click Login">
-<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<status status="PASS" start="2025-05-13T20:56:41.378033" elapsed="17.696200"/>
+</kw>
+<kw name="Verify Home Page" owner="HomePage">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T20:57:01.089427" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T20:56:59.080778" elapsed="2.008649"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-13T20:57:01.100503" level="INFO">Current page contains text 'Dashboard'.</msg>
+<arg>Dashboard</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-13T20:57:01.089427" elapsed="0.011076"/>
+</kw>
+<status status="PASS" start="2025-05-13T20:56:59.074233" elapsed="2.026270"/>
+</kw>
+<status status="PASS" start="2025-05-13T20:56:41.378033" elapsed="19.722470"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-13T20:57:01.100503" level="INFO">Typing text 'Buzz' into text field '//input[@placeholder="Search"]'.</msg>
+<arg>${LOCATOR_SEARCH_BAR}</arg>
+<arg>${SEARCH_TEXT12}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T20:57:01.100503" elapsed="0.045437"/>
+</kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-12T17:40:15.001544" level="INFO">Clicking element '//button[@type='submit']'.</msg>
-<msg time="2025-05-12T17:40:15.194877" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-05-12T17:40:15.195228" level="FAIL">Element with locator '//button[@type='submit']' not found.</msg>
-<arg>${LOCATOR_LOGIN_BUTTON}</arg>
+<msg time="2025-05-13T20:57:01.145940" level="INFO">Clicking element '//span[normalize-space()='Buzz']'.</msg>
+<arg>${BUZZ_MENU}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2025-05-12T17:40:15.001355" elapsed="0.199581">Element with locator '//button[@type='submit']' not found.</status>
+<status status="PASS" start="2025-05-13T20:57:01.145940" elapsed="0.710454"/>
 </kw>
-<arg>Click Element</arg>
-<arg>${LOCATOR_LOGIN_BUTTON}</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-05-12T17:40:15.001211" elapsed="0.199938"/>
-</kw>
-<doc>Clicks on the login button</doc>
-<status status="PASS" start="2025-05-12T17:40:15.000978" elapsed="0.200326"/>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-13T20:57:01.865530" level="INFO">Current location is 'https://opensource-demo.orangehrmlive.com/web/index.php/buzz/viewBuzz'.</msg>
+<arg>${BUZZ_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-05-13T20:57:01.856394" elapsed="0.009136"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-05-12T17:40:15.201833" elapsed="2.189009"/>
+<status status="PASS" start="2025-05-13T20:57:01.865530" elapsed="2.918435"/>
 </kw>
-<doc>Verify user can login with valid credentials</doc>
-<status status="PASS" start="2025-05-12T17:40:07.752955" elapsed="9.638381"/>
+<status status="PASS" start="2025-05-13T20:56:41.378033" elapsed="23.405932"/>
 </test>
-<status status="PASS" start="2025-05-12T17:40:07.507309" elapsed="9.885663"/>
+<status status="PASS" start="2025-05-13T20:56:41.171335" elapsed="23.612630"/>
 </suite>
 <statistics>
 <total>
@@ -155,7 +185,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="LoginTests" id="s1" pass="1" fail="0" skip="0">LoginTests</stat>
+<stat name="HomeTests" id="s1" pass="1" fail="0" skip="0">HomeTests</stat>
 </suite>
 </statistics>
 <errors>

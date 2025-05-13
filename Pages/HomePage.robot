@@ -35,15 +35,29 @@ ${SEARCH_TEXT4}        Leave
 ${LEAVE_MENU}       //span[normalize-space()='Leave']
 ${LEAVE_URL}         https://opensource-demo.orangehrmlive.com/web/index.php/leave/viewLeaveList
 ${SEARCH_TEXT5}        Time
-${TIME_MENU}       //span[normalize-space()='Leave']
-${TIME_URL}         https://opensource-demo.orangehrmlive.com/web/index.php/leave/viewLeaveList
+${TIME_MENU}       //span[normalize-space()='Time']
+${TIME_URL}         https://opensource-demo.orangehrmlive.com/web/index.php/time/viewEmployeeTimesheet
 ${SEARCH_TEXT6}        Recruitment
 ${RECRUITMENT_MENU}       //span[normalize-space()='Recruitment']
 ${RECRUITMENT_URL}         https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates
-
-
-
-
+${SEARCH_TEXT7}        My Info
+${MY_INFO_MENU}       //span[normalize-space()='My Info']
+${MY_INFO_URL}         https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/7
+${SEARCH_TEXT8}        Performance
+${PERFORMANCE_MENU}       //span[normalize-space()='Performance']
+${PERFORMANCE_URL}         https://opensource-demo.orangehrmlive.com/web/index.php/performance/searchEvaluatePerformanceReview
+${SEARCH_TEXT9}        Dashboard
+${DASHBOARD_MENU}       //span[normalize-space()='Dashboard']
+${DASHBOARD_URL}         https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+${SEARCH_TEXT10}        Maintenance
+${MAINTENANCE_MENU}       //span[normalize-space()='Maintenance']
+${MAINTENANCE_URL}         https://opensource-demo.orangehrmlive.com/web/index.php/maintenance/purgeEmployee
+${SEARCH_TEXT11}        Claim
+${CLAIM_MENU}       //span[normalize-space()='Claim']
+${CLAIM_URL}         https://opensource-demo.orangehrmlive.com/web/index.php/claim/viewAssignClaim
+${SEARCH_TEXT12}        Buzz
+${BUZZ_MENU}       //span[normalize-space()='Buzz']
+${BUZZ_URL}         https://opensource-demo.orangehrmlive.com/web/index.php/buzz/viewBuzz
 
 
 *** Keywords ***

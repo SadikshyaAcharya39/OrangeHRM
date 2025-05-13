@@ -92,7 +92,64 @@ Verifying Search Bar Functionality - Admin
     [Teardown]    Close Browser
 
 
+Verifying Search Bar Functionality - PIM
+    Input Text  ${LOCATOR_SEARCH_BAR}   ${SEARCH_TEXT3}
+    Click Element    ${PIM_MENU}
+    Location Should Be    ${PIM_URL}
+    [Teardown]    Close Browser
 
 
+Verifying Search Bar Functionality - Leave
+    Input Text  ${LOCATOR_SEARCH_BAR}   ${SEARCH_TEXT4}
+    Click Element    ${LEAVE_MENU}
+    Location Should Be    ${LEAVE_URL}
+    [Teardown]    Close Browser
 
-    
+Verifying Search Bar Functionality - Time
+    Input Text  ${LOCATOR_SEARCH_BAR}   ${SEARCH_TEXT5}
+    Click Element    ${TIME_MENU}
+    Location Should Be    ${TIME_URL}
+    [Teardown]    Close Browser
+
+
+Verifying Search Bar Functionality - Recruitment
+    Input Text  ${LOCATOR_SEARCH_BAR}   ${SEARCH_TEXT6}
+    Click Element    ${RECRUITMENT_MENU}
+    Location Should Be    ${RECRUITMENT_URL}
+    [Teardown]    Close Browser
+
+Verifying Search Bar Functionality - My Info
+    Input Text  ${LOCATOR_SEARCH_BAR}   ${SEARCH_TEXT7}
+    Click Element    ${MY_INFO_MENU}
+    Location Should Be    ${MY_INFO_URL}
+    [Teardown]    Close Browser
+
+Verifying Search Bar Functionality - Performance
+    Input Text  ${LOCATOR_SEARCH_BAR}   ${SEARCH_TEXT8}
+    Click Element    ${PERFORMANCE_MENU}
+    Location Should Be    ${PERFORMANCE_URL}
+    [Teardown]    Close Browser
+
+Verifying Search Bar Functionality - Dashboard
+    Input Text  ${LOCATOR_SEARCH_BAR}   ${SEARCH_TEXT9}
+    Click Element    ${DASHBOARD_MENU}
+    Location Should Be    ${DASHBOARD_URL}
+    [Teardown]    Close Browser
+
+Verifying Search Bar Functionality - Maintenance
+    Input Text  ${LOCATOR_SEARCH_BAR}   ${SEARCH_TEXT10}
+    Click Element    ${MAINTENANCE_MENU}
+    Location Should Be    ${MAINTENANCE_URL}
+    [Teardown]    Close Browser
+
+Verifying Search Bar Functionality - Claim
+    Input Text  ${LOCATOR_SEARCH_BAR}   ${SEARCH_TEXT11}
+    Click Element    ${CLAIM_MENU}
+    Location Should Be    ${CLAIM_URL}
+    [Teardown]    Close Browser
+
+Verifying Search Bar Functionality - Buzz
+    Input Text  ${LOCATOR_SEARCH_BAR}   ${SEARCH_TEXT12}
+    Click Element    ${BUZZ_MENU}
+    Location Should Be    ${BUZZ_URL}
+    [Teardown]    Close Browser
