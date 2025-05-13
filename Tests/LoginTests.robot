@@ -9,9 +9,11 @@ Test Teardown    Close Browser
 Successful Login With Valid Credentials
     [Documentation]    Verify user can login with valid credentials
     Initialize Login Data
-    Open Login Page    ${URL}
+#    Open Login Page    ${URL}
+    Open Login Page In Headless Mode    ${URL}
     Enter Credentials    ${USERNAME}    ${PASSWORD}
     Click Login
+    Verify Dashboard Visible
     [Teardown]    Close Browser
 
 

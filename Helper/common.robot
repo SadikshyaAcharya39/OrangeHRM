@@ -16,3 +16,9 @@ Initialize Login Data
     Set Suite Variable    ${USERNAME}      ${username}
     Set Suite Variable    ${PASSWORD}      ${password}
 
+Open Login Page In Headless Mode
+    [Arguments]    ${url}
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].FirefoxOptions()    sys, selenium.webdriver
+    Call Method    ${options}    add_argument    --headless
+    Create WebDriver    Firefox    options=${options}
+    Go To    ${url}
