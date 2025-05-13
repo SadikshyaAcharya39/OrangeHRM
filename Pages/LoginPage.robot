@@ -12,15 +12,17 @@ ${LOCATOR_DASHBOARD}                 //h6[normalize-space()='Dashboard']
 *** Keywords ***
 Open Login Page
     [Arguments]    ${url}
-    Open Browser    ${URL}    chrome
+    Open Browser    ${url}
     Maximize Browser Window
 
 Enter Credentials
     [Arguments]    ${username}    ${password}
-    Wait Until Element Is Visible    ${LOCATOR_USERNAME_FIELD}    timeout=10
+    Wait Until Element Is Visible    ${LOCATOR_USERNAME_FIELD}    
+    
     Input Text    ${LOCATOR_USERNAME_FIELD}    ${username}
-
-    Wait Until Element Is Visible    ${LOCATOR_PASSWORD_FIELD}    timeout=15
+    Sleep    2s
+    Wait Until Element Is Visible    ${LOCATOR_PASSWORD_FIELD}
+    Sleep    2s
     Input Text    ${LOCATOR_PASSWORD_FIELD}    ${password}
 
     Wait Until Element Is Visible    ${LOCATOR_LOGIN_BUTTON}    timeout=10

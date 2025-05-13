@@ -15,3 +15,4 @@ Initialize Login Data
     Set Suite Variable    ${URL}           ${url}
     Set Suite Variable    ${USERNAME}      ${username}
     Set Suite Variable    ${PASSWORD}      ${password}
+

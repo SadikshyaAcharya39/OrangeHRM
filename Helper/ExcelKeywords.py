@@ -6,3 +6,4 @@ def read_excel_data(file_path, sheet_name, cell):
     # Get the value of the specified cell
     cell_value = sheet[cell].value
     return cell_value
+
